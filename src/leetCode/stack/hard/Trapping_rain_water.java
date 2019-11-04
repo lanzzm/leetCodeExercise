@@ -10,7 +10,6 @@ import java.util.Stack;
 public class Trapping_rain_water {
 	
     public int trap(int[] height) {
-        
     	Stack<Integer> stack = new Stack<Integer>();
     	int top = 0;
     	int beginIndex = 0;

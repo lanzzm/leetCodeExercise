@@ -42,6 +42,7 @@ public class Valid_parentheses {
      * @return
      */
     public boolean isValid_02(String s) {
+    	// 更加可以 &1==1
 		if (s.length() % 2 != 0)
 			return false;
 		char[] inputStrChars = s.toCharArray();

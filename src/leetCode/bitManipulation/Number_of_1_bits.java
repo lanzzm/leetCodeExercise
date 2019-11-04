@@ -19,7 +19,7 @@ public class Number_of_1_bits {
     	return result;
     }	
     
-	//求余
+	//求余 这个慢了把，
     public int hammingWeight_02(int n) {
         int ans=0;
         while(n!=0)
