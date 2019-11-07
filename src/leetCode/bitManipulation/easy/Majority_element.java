@@ -6,6 +6,7 @@ import java.util.Arrays;
  * @author lanzm
  * link:https://leetcode-cn.com/problems/majority-element/
  * leet code serial number:169
+ * 众数 数组中超过一般的数
  */
 public class Majority_element {
 	

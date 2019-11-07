@@ -10,13 +10,30 @@ import java.util.BitSet;
 public class Reverse_bits {
 	
 	//源码版,太神仙,看不懂
-    public int reverseBits(int n) {
-    	return   Integer.reverse(n);  	
+    public int reverseBits(int i) {
+    	
+    	
+    	//Integer.reverse(n) 源码
+        // HD, Figure 7-1
+    	
+    	//去奇数位 然后往左移动一位 偶数位 往右移动一位然后取基数位,最后结合结果 
+    	// 其实就是奇偶互换
+    	// 0101
+        i = (i & 0x55555555) << 1 | (i >>> 1) & 0x55555555;
+        // 0011        
+        i = (i & 0x33333333) << 2 | (i >>> 2) & 0x33333333;
+        // 1111
+        i = (i & 0x0f0f0f0f) << 4 | (i >>> 4) & 0x0f0f0f0f;
+        // 两头互换 中间也互换   
+        i = (i << 24) | ((i & 0xff00) << 8) |
+            ((i >>> 8) & 0xff00) | (i >>> 24);
+    	
+    	return  i  ;  
     }
     
     //自己写的 n ^ 00100 会改变n的数 相当于取反
     //     n & 00100  只保留1上的数字
-    //  n | 00101  ; 这个是 强行改变对应位置上的数字
+    //  n | 00101  ; 这个是 强行改变对应位置上的数字 
     public int reverseBits_02(int n) {
     	for(int i = 0;i<16;i++){
     		//取右边

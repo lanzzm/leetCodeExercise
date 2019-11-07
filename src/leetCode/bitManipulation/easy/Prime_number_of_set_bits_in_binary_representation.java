@@ -46,7 +46,14 @@ public class Prime_number_of_set_bits_in_binary_representation {
     
    
     
-    
+    public int countPrimeSetBits_02(int L, int R) {
+    	int count = 0;
+    	for(int i=0;i<=(R-L);i++){
+    		if(primeNumber(Integer.bitCount(L+i)))
+    			count++;
+    	}
+    	return count;
+    }
     
     
     

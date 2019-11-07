@@ -29,4 +29,13 @@ public class Number_of_1_bits {
         }
         return ans;
     }	
+    
+    
+    
+    public int hammingWeight_03(int n) {
+
+        return Integer.bitCount(n);
+    }
+    
+    
 }
