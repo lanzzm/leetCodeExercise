@@ -1,4 +1,4 @@
-package leetCode.bitManipulation;
+package leetCode.bitManipulation.easy;
 
 import java.util.BitSet;
 
